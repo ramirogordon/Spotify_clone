@@ -8,7 +8,7 @@ export class LibraryMain extends Component {
     return (
       <div>
         <LibraryNavigation />
-        <LibraryDetails />
+        <LibraryDetails name="PLAYLIST"/>
       </div>
     )
   }
