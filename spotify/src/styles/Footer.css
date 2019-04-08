@@ -3,3 +3,7 @@
     min-width: 620px;
     background-color: #282828;
 }
+
+audio {
+    padding: 20px 0;
+}
