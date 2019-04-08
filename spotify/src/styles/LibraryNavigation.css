@@ -1,0 +1,25 @@
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+.librarynavigation-content {
+    background-color: #444;
+    padding: 40px 0;
+    min-height: calc(100vh - 311px);
+}
+
+.librarynavigation-content input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.librarynavigation-content input:hover {
+    cursor: pointer;
+    color: #1ed760;
+}

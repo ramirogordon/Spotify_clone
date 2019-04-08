@@ -1,0 +1,11 @@
+.librarymain-content {
+    display: flex;
+}
+
+.navi {
+    flex-basis: 15%;
+}
+
+.det {
+    flex-basis: 85%;
+}
