@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import SearchMain from './SearcjMain';
+
+
 import './styles/SearchScreen.css';
 
 

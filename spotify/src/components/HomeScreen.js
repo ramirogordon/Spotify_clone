@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import HomeMain from './HomeMain';
+
 import './styles/HomeScreen.css';
 
 export class HomeScreen extends Component {
@@ -6,6 +8,9 @@ export class HomeScreen extends Component {
     return (
       <div>
         
+        HEADER
+        HOMEMAIN
+        FOOTER
       </div>
     )
   }
