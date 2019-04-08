@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-// import HomeMain from '../styles/HomeMain.css';
+import HomeMain from './HomeMain';
+import Header from './Header'
+import Footer from './Footer'
 
 import '../styles/HomeScreen.css';
 
@@ -7,9 +9,9 @@ export class HomeScreen extends Component {
   render() {
     return (
       <div>
-        HEADER
-        HOMEMAIN
-        FOOTER
+        <Header />
+        <HomeMain />
+        <Footer />
       </div>
     )
   }

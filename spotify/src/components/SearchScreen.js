@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
-import SearchMain from './SearchMain';
+import Header from './Header'
+import Footer from './Footer'
+import SearchMain from './SearcjMain';
 
 
-import '../styles/SearchScreen.css';
+
+import './styles/SearchScreen.css';
 
 
 export class SearchScreen extends Component {
   render() {
     return (
       <div>
-        HEADER
-        SearchMAIN
-        FOOTER
+        <Header />
+        <SearchMain />
+        <Footer />
       </div>
     )
   }
