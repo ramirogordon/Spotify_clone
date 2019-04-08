@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Header from './Header'
+import Footer from './Footer'
 import LibraryMain from './LibraryMain';
 
 
@@ -9,7 +11,9 @@ export class LibraryScreen extends Component {
   render() {
     return (
       <div>
-        
+        <Header />
+        <LibraryMain />
+        <Footer />
       </div>
     )
   }
