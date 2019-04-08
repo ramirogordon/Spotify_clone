@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import LibraryMain from './LibraryMain';
+
+
 import './styles/LibraryScreen.css';
 
 
