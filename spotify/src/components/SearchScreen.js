@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import SearchMain from './SearcjMain';
+import SearchMain from './SearchMain';
 
 
 
-import './styles/SearchScreen.css';
+import '../styles/SearchScreen.css';
 
 
 export class SearchScreen extends Component {
