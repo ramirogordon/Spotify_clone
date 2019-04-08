@@ -1,0 +1,58 @@
+.homemain {
+    padding: 0;
+    margin: 0;
+    padding-top: 40px; 
+    background: #4B79A1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.homemain-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    margin: 0;
+    color: white;
+}
+
+h2 {
+    padding: 30px 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 30px; 
+}
+
+img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.band-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.band-name {
+    flex-basis: 20%;
+}
+
+.band-name h3 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
