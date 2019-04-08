@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import HomeScreen from './components/HomeScreen';
+import SearchScreen from './components/SearchScreen';
+import LibraryScreen from './components/LibraryScreen';
 import './App.css';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
