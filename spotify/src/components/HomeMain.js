@@ -12,7 +12,7 @@ import band10 from '../img/band10.png';
 
 import '../styles/HomeMain.css';
 
-export class HomeMain extends Component {
+class HomeMain extends Component {
   render() {
     return (
       <div className="homemain">
@@ -21,43 +21,63 @@ export class HomeMain extends Component {
             <h2>NEW RELEASES</h2>
             <div className="band-items">
               <div className="band-name">
-                <img src={band1} alt="band1"/>
+                <figure>
+                  <img src={band1} alt="band1"/>
+                </figure>
                 <h3>The peppers</h3>
               </div>
               <div className="band-name">
-                <img src={band2} alt="band2"/>
+                <figure>
+                  <img src={band2} alt="band2"/>
+                </figure>
                 <h3>Eminem</h3>
               </div>
               <div className="band-name">
-                <img src={band3} alt="band3"/>
+                <figure>
+                  <img src={band3} alt="band3"/>
+                </figure>
                 <h3>Fleetwood Mac</h3>
               </div>
               <div className="band-name">
-                <img src={band4} alt="band4"/>
+                <figure>
+                  <img src={band4} alt="band4"/>
+                </figure>
                 <h3>R.E.M.</h3>
               </div>
               <div className="band-name">
-                <img src={band5} alt="band5"/>
+                <figure>
+                  <img src={band5} alt="band5"/>
+                </figure>
                 <h3>Twenty One Pilots</h3>
               </div>
               <div className="band-name">
-                <img src={band6} alt="band6"/>
+                <figure>
+                  <img src={band6} alt="band6"/>
+                </figure>
                 <h3>Maroon 5</h3>
               </div>
               <div className="band-name">
-                <img src={band7} alt="band7"/>
+                <figure>
+                  <img src={band7} alt="band7"/>
+                </figure>
                 <h3>Calvin Harris</h3>
               </div>
               <div className="band-name">
-                <img src={band8} alt="band8"/>
+                <figure>
+                  <img src={band8} alt="band8"/>
+                </figure>
                 <h3>DJ Snake</h3>
               </div>
               <div className="band-name">
-                <img src={band9} alt="band9"/>
+                <figure>
+                  <img src={band9} alt="band9"/>
+                </figure>
                 <h3>Bon Jovi</h3>
               </div>
               <div className="band-name">
-                <img src={band10} alt="band10"/>
+                <figure>
+                  <img src={band10} alt="band10"/>
+                </figure>
                 <h3>Florence + the Machine</h3>
               </div>
             </div>
@@ -66,23 +86,33 @@ export class HomeMain extends Component {
           <h2>CHARTS</h2>
           <div className="band-items">
               <div className="band-name">
-                <img src={band1} alt="band1"/>
+                <figure>
+                  <img src={band1} alt="band1"/>
+                </figure>
                 <h3>The peppers</h3>
               </div>
               <div className="band-name">
-                <img src={band2} alt="band2"/>
+                <figure>
+                  <img src={band2} alt="band2"/>
+                </figure>
                 <h3>Eminem</h3>
               </div>
               <div className="band-name">
-                <img src={band3} alt="band3"/>
+                <figure>
+                  <img src={band3} alt="band3"/>
+                </figure>
                 <h3>Fleetwood Mac</h3>
               </div>
               <div className="band-name">
-                <img src={band4} alt="band4"/>
+                <figure>
+                  <img src={band4} alt="band4"/>
+                </figure>
                 <h3>R.E.M.</h3>
               </div>
               <div className="band-name">
-                <img src={band5} alt="band5"/>
+                <figure>
+                  <img src={band5} alt="band5"/>
+                </figure>
                 <h3>Twenty One Pilots</h3>
               </div>
             </div>

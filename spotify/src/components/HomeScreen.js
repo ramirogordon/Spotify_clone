@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 import '../styles/HomeScreen.css';
 
-export class HomeScreen extends Component {
+class HomeScreen extends Component {
   render() {
     return (
       <div>
