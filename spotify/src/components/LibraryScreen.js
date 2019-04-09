@@ -7,7 +7,7 @@ import LibraryMain from './LibraryMain';
 import '../styles/LibraryScreen.css';
 
 
-export class LibraryScreen extends Component {
+class LibraryScreen extends Component {
   render() {
     return (
       <div>

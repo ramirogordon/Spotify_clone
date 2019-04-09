@@ -5,7 +5,7 @@ import spotifyLogo from '../img/spotify_logo.png';
 // Styles
 import '../styles/Header.css';
 
-export class Header extends Component {
+class Header extends Component {
   render() {
     return (
       <div className="header">

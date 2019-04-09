@@ -12,7 +12,7 @@ import band10 from '../img/band10.png';
 
 import '../styles/HomeMain.css';
 
-export class HomeMain extends Component {
+class HomeMain extends Component {
   render() {
     return (
       <div className="homemain">
