@@ -11,7 +11,7 @@ export class LibraryMain extends Component {
           <LibraryNavigation />
         </div>
         <div className="det">
-          <LibraryDetails className="det"/>
+          <LibraryDetails className="det" name="PLAYLIST"/>
         </div>
       </div>
     )
