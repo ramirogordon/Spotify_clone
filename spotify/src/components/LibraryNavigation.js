@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+<<<<<<< HEAD
 import '../styles/LibraryNavigation.css';
 
 export class LibraryNavigation extends Component {
@@ -34,6 +35,13 @@ export class LibraryNavigation extends Component {
           name="videos"
           value="Videos"
           type="button"/>
+=======
+export class LibraryNavigation extends Component {
+  render() {
+    return (
+      <div>
+        NAVIGATION
+>>>>>>> 7597db78b206dfed28ce94ac04c861ae3b587854
       </div>
     )
   }
