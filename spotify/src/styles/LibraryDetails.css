@@ -1,7 +1,11 @@
 .libraryDetails {
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
     padding-top: 40px; 
+=======
+    padding-top: 20px; 
+>>>>>>> 9bc8d3f67ea6a3e46d88e38b8eebdd9eb1fa8da6
     background: #4B79A1;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -19,7 +23,11 @@
     padding-right: 20px;
 }
 
+<<<<<<< HEAD
 img:hover {
+=======
+.item img:hover {
+>>>>>>> 9bc8d3f67ea6a3e46d88e38b8eebdd9eb1fa8da6
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.62);
     -moz-box-shadow: 0px 0px 28px -4px rgba(0,0,0,0.62);
@@ -27,7 +35,11 @@ img:hover {
 }
 
 h2 {
+<<<<<<< HEAD
     padding-left: 130px;
+=======
+    padding-left: 25px;
+>>>>>>> 9bc8d3f67ea6a3e46d88e38b8eebdd9eb1fa8da6
     color: #1ed760;
 }
 
