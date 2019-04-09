@@ -1,9 +1,11 @@
 .footer {
+    position: fixed;
+    bottom: 0;
     text-align: center;
-    min-width: 620px;
+    min-width: 100%;
     background-color: #282828;
 }
 
 audio {
-    padding: 40px 0;
+    padding: 10px 0;
 }
