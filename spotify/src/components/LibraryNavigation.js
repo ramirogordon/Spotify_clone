@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import faceUser from '../img/face-user.jpg'
 
 import '../styles/LibraryNavigation.css';
 
@@ -6,6 +7,7 @@ class LibraryNavigation extends Component {
   render() {
     return (
       <div className="librarynavigation-content">
+        <div className="submenu">
         <input 
           name="playlist"
           value="Playlist"
@@ -34,6 +36,12 @@ class LibraryNavigation extends Component {
           name="videos"
           value="Videos"
           type="button"/>
+        </div>
+        <hr className="line"/>
+        <div className="info-user">
+          <img className="face-user" src={faceUser} alt=""/>
+          <p>Jane Dylan</p>
+        </div>
       </div>
     )
   }
