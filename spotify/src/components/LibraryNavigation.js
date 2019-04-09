@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9bc8d3f67ea6a3e46d88e38b8eebdd9eb1fa8da6
 import '../styles/LibraryNavigation.css';
 
 export class LibraryNavigation extends Component {

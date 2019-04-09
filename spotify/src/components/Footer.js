@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../styles/Footer.css';
-// import { Button, ButtonGroup } from '../components/buttons';
 
 export class Footer extends Component {
   render() {
