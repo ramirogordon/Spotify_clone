@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import '../styles/LibraryNavigation.css';
 
-export class LibraryNavigation extends Component {
+class LibraryNavigation extends Component {
   render() {
     return (
       <div className="librarynavigation-content">

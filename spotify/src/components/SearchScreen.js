@@ -8,7 +8,7 @@ import SearchMain from './SearchMain';
 import '../styles/SearchScreen.css';
 
 
-export class SearchScreen extends Component {
+class SearchScreen extends Component {
   render() {
     return (
       <div>
