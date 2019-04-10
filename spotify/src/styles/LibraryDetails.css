@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     padding-top: 20px; 
+    padding-bottom: 100px;
     background: #4B79A1;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -14,10 +15,10 @@
     justify-content: center;
 }
 
-.item {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+ .item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+} 
 
 .item img:hover {
     cursor: pointer;
@@ -27,7 +28,7 @@
 }
 
 h2 {
-    padding-left: 25px;
+    padding: 1rem 0 2rem 1.563rem;
     color: #1ed760;
 }
 

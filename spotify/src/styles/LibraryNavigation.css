@@ -47,6 +47,6 @@ textarea:focus, input:focus{
 .info-user p {
     margin: 0;
     padding: 0;
-    color: white;
+    color: #1ed760;
     text-align: center;
 }
