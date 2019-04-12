@@ -1,28 +1,20 @@
 var createError = require('http-errors');
 var express = require('express');
-var path = require('path');
+// var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
 
 var request = require('request'); // "Request" library
-var cors = require('cors');
 var querystring = require('querystring');
-var cookieParser = require('cookie-parser');
 
 var client_id = 'de5eb7e18f6d4eed908335927ce7bc18'; // Your client id
 var client_secret = 'd20fe77a0a864d42b6b33fb3c595739e'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'http://localhost:3001/callback'; // Your redirect uri
 
-/**
- * Generates a random string containing numbers and letters
- * @param  {number} length The length of the string
- * @return {string} The generated string
- */
 var generateRandomString = function(length) {
   var text = '';
   var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -35,7 +27,9 @@ var generateRandomString = function(length) {
 
 var stateKey = 'spotify_auth_state';
 
+
 var app = express();
+
 
 app.use(express.static(__dirname + '/public'))
    .use(cors())
@@ -43,6 +37,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/login', function(req, res) {
 
+  console.log('entrando al metodo login');
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
@@ -56,16 +51,18 @@ app.get('/login', function(req, res) {
       redirect_uri: redirect_uri,
       state: state
     }));
+  console.log('state=',state);
 });
 
 app.get('/callback', function(req, res) {
 
   // your application requests refresh and access tokens
   // after checking the state parameter
-
+  console.log('entrando al metodo callback');
   var code = req.query.code || null;
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
+  console.log('code=', code);
 
   if (state === null || state !== storedState) {
     res.redirect('/#' +
@@ -74,7 +71,7 @@ app.get('/callback', function(req, res) {
       }));
   } else {
     res.clearCookie(stateKey);
-    var authOptions = {
+    var authOptions = {   
       url: 'https://accounts.spotify.com/api/token',
       form: {
         code: code,
@@ -92,7 +89,7 @@ app.get('/callback', function(req, res) {
 
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
-
+        console.log('este es el ', access_token);
         var options = {
           url: 'https://api.spotify.com/v1/me',
           headers: { 'Authorization': 'Bearer ' + access_token },
@@ -105,11 +102,13 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('/#' +
-          querystring.stringify({
-            access_token: access_token,
-            refresh_token: refresh_token
-          }));
+        // res.redirect('/#' +
+        //   querystring.stringify({
+        //     access_token: access_token,
+        //     refresh_token: refresh_token
+        //   }));
+        let uri = 'http://localhost:3000';
+        res.redirect(uri + '?access_token=' + access_token);
       } else {
         res.redirect('/#' +
           querystring.stringify({
@@ -143,6 +142,5 @@ app.get('/refresh_token', function(req, res) {
     }
   });
 });
-
 
 module.exports = app;
