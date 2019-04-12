@@ -5,15 +5,18 @@ textarea:focus, input:focus{
 
 .librarynavigation-content {
     background-color: #444;
-    padding: 40px 0;
-    min-height: calc(100vh - 311px);
+    height: 100%;
 }
 
 .librarynavigation-content input {
+    justify-items: start; 
     background-color: transparent;
+    font-size: 14px;
     border: none;
     color: white;
-    width: 100%;
+    width: 70%;
+    margin-left: 30%;
+    text-align: start;
     padding: 10px 0;
     text-transform: uppercase;
     transition: 0.5s;
@@ -22,4 +25,28 @@ textarea:focus, input:focus{
 .librarynavigation-content input:hover {
     cursor: pointer;
     color: #1ed760;
+}
+
+.submenu {
+    padding-top: 20px;
+}
+
+.line {
+    border: 1px solid #282828;
+    margin: 0 20px;
+    margin-top: 30px;
+}
+
+.face-user {
+    margin: 20px auto 10px auto;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+}
+
+.info-user p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
 }

@@ -1,0 +1,44 @@
+#bus {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.005em;
+    color: #fff;
+    text-transform: none;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #444;
+    border: none;
+}
+
+.context {
+    background-color: #444;
+    padding: 16px
+}
+
+.search {
+    margin: 0 auto;
+    padding: 0 32px;
+    max-width: 1480px;
+}
+
+.search-results {
+    padding: 0 32px;
+    align-items: center;
+}
+
+.h-text {
+    margin: none;
+    color: #fff;
+    text-align: center;
+}
+
+.p-text {
+    margin-block-end: 0em;
+    color: #b3b3b3;
+    text-align: center;
+}
+
+.main {
+    height: calc(100vh - 231px);
+    background-color: #222222
+}

@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
+import faceUser from '../img/face-user.jpg'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9bc8d3f67ea6a3e46d88e38b8eebdd9eb1fa8da6
 import '../styles/LibraryNavigation.css';
 
-export class LibraryNavigation extends Component {
+class LibraryNavigation extends Component {
   render() {
     return (
       <div className="librarynavigation-content">
+        <div className="submenu">
         <input 
           name="playlist"
           value="Playlist"
@@ -38,16 +36,12 @@ export class LibraryNavigation extends Component {
           name="videos"
           value="Videos"
           type="button"/>
-<<<<<<< HEAD
-=======
-export class LibraryNavigation extends Component {
-  render() {
-    return (
-      <div>
-        NAVIGATION
->>>>>>> 7597db78b206dfed28ce94ac04c861ae3b587854
-=======
->>>>>>> 9bc8d3f67ea6a3e46d88e38b8eebdd9eb1fa8da6
+        </div>
+        <hr className="line"/>
+        <div className="info-user">
+          <img className="face-user" src={faceUser} alt=""/>
+          <p>Jane Dylan</p>
+        </div>
       </div>
     )
   }
