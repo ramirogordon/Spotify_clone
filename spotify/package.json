@@ -2,6 +2,7 @@
   "name": "spotify",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "query-string": "^6.4.2",
     "react": "^16.8.6",

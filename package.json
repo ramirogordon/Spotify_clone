@@ -1,0 +1,25 @@
+{
+  "name": "Spotify_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "spotify": "cd spotify && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently - kill-others \"npm run server\" \"npm run spotify\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramirogordon/Spotify_clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramirogordon/Spotify_clone/issues"
+  },
+  "homepage": "https://github.com/ramirogordon/Spotify_clone#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
