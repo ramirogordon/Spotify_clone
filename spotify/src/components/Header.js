@@ -1,39 +1,13 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import spotifyLogo from '../img/spotify_logo.png';
-import queryString from 'query-string';
+// import queryString from 'query-string';
 
 // Styles
 import '../styles/Header.css';
 
 class Header extends Component {
 
-  componentDidMount() {
-    let parsed = queryString.parse(window.location.search);
-    console.log(parsed);
-    let accessToken = parsed.code;
-    // usuario data
-    fetch('https://api.spotify.com/v1/users/ramirogordon', {
-      headers: {'Authorization': 'Bearer ' + accessToken}
-    }).then(
-      response => response.json()
-    ).then(
-      data => {
-        console.log(data);
-      }
-    );
-    // playlist data
-    fetch('https://api.spotify.com/v1/me/playlists', {
-      headers: {'Authorization': 'Bearer ' + accessToken}
-    }).then(
-      response => response.json()
-    ).then(
-      playdata => {
-        console.log(playdata);
-      }
-    );
-  }
-  
   
   render() {
     return (
@@ -55,7 +29,7 @@ class Header extends Component {
               </li>
               <li>
                 <i className="fas fa-user-circle"></i>
-                <Link className="nav-link" to="/library">Profile</Link>
+                <Link className="nav-link" to="/library">{this.props.userName}</Link>
               </li>
             </ul>
           </div>  

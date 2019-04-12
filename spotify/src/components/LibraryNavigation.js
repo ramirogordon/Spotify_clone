@@ -1,46 +1,54 @@
 import React, { Component } from 'react';
-import faceUser from '../img/face-user.jpg'
 
 import '../styles/LibraryNavigation.css';
 
 class LibraryNavigation extends Component {
+
+  changeTitle = (a) => {
+    let title = a.target.value;
+    this.props.handleChangeTitle(title)
+  }
+
   render() {
+    let {userName, userImageUrl } = this.props.dataUser;
     return (
       <div className="librarynavigation-content">
         <div className="submenu">
         <input 
+          onClick={a => this.changeTitle(a)}
           name="playlist"
           value="Playlist"
           type="button"/>
         <input 
-          name="stations"
-          value="Stations"
+          onClick={a => this.changeTitle(a)}
+          name="suggestion"
+          value="Suggestions"
           type="button"/>
         <input 
+          onClick={a => this.changeTitle(a)}
           name="songs"
           value="Songs"
           type="button"/>
         <input 
-          name="albums"
-          value="Albums"
+          onClick={a => this.changeTitle(a)}
+          name="albumes"
+          value="Albumes"
           type="button"/>
         <input 
+          onClick={a => this.changeTitle(a)}
           name="artists"
           value="Artists"
           type="button"/>
         <input 
-          name="podcasts"
-          value="Podcasts"
-          type="button"/>
-        <input 
-          name="videos"
-          value="Videos"
+          onClick={a => this.changeTitle(a)}
+          name="releases"
+          value="Releases"
           type="button"/>
         </div>
         <hr className="line"/>
         <div className="info-user">
-          <img className="face-user" src={faceUser} alt=""/>
-          <p>Jane Dylan</p>
+          <img className="face-user" src={userImageUrl} alt=""/>
+          <p>{userName}</p>
         </div>
       </div>
     )

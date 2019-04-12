@@ -20,7 +20,7 @@ class LibraryDetails extends Component {
         <div className="items">
           <div className="item">
             <img src={band6} alt="band6" />
-            <h3>Marron 5</h3>
+            <h3>Maroon 5</h3>
           </div>
           <div className="item">
             <img src={band4} alt="band4" />
