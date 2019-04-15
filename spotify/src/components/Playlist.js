@@ -1,35 +1,69 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Tracks from './Tracks';
 
-const Playlist = (props) => {
-
-  console.log('entro a playlist');
-  const getPlaylistDetails = () => {
-    const modal = document.getElementById('modal');
-    modal.style.display = "block";
-    window.onclick = (event) => {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
+class Playlist extends Component {
+  constructor() {
+    super();
+    this.state = {
+      songs: null
     }
   }
 
-  return (
-    <>
+  componentDidMount() {
+    fetch(this.props.item.tracks.href, {
+      headers: {'Authorization': 'Bearer ' + this.props.accessToken}
+    }).then(
+      response => response.json()
+    ).then(
+      songs => {
+        this.setState({
+          songs: songs
+        });
+      }
+    );
+  }
+  
+  getPlaylistDetails = () => {
+    const modal = document.getElementById('modal');
+    modal.style.display = "block";
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+
+  render() {
+    let list;
+    const songs = this.state.songs;
+    console.log(songs);
+    if (songs) {
+      list = songs.items.map((song, i) => {
+        return(
+          <Tracks 
+            key={i} 
+            song={song.track.name}
+          />
+        )
+      })
+    }
+    return (
+      <>
         <figure>
-            <img src={props.band} alt="band1" onClick={getPlaylistDetails}/>
+          <img src={this.props.band} alt="band1" onClick={this.getPlaylistDetails}/>
         </figure>
-        <h3>{props.item.name}</h3>
+        <h3>{this.props.item.name}</h3>
         <div id="modal">
-            <div className="modal-content">
-                <Tracks 
-                    item={props.item} 
-                    accessToken={props.accessToken}
-                />
-            </div>
+          <div className="modal-content">
+            <ul>
+              {list}
+            </ul>
+          </div>
         </div>
-    </>
-  )
+      </>
+    )
+  }
+  
 }
 
 export default Playlist

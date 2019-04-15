@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import band1 from '../img/band1.png';
-
+import React, { Component } from 'react';
 
 import '../styles/HomeMain.css';
 import Playlist from './Playlist';
@@ -9,7 +7,7 @@ class HomeMain extends Component {
   render() {
     let list;
     const playlists = this.props.data.items;
-    console.log(playlists);
+    // console.log(playlists);
     if (playlists) {
       list = playlists.map((item, i) => {
         const imagen = item.images[0].url

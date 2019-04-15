@@ -1,28 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Tracks extends Component {
-    componentDidMount() {
-        fetch(this.props.item.tracks.href, {
-            headers: {'Authorization': 'Bearer ' + this.props.accessToken}
-        }).then(
-            response => response.json()
-        ).then(
-            songs => {
-                console.log(songs);
-                // console.log(songs.items[0].track.name);
-            }
-        );
-    }
-    render() {
-        return (<>
-        <ul>
-            <li>
-                <p>cancion 1</p>
+ const Tracks = (props) => {
+    return (
+        <>
+            <li key={props.i}>
+                <p>{props.song}</p>
             </li>
-        </ul>
-      </>
+        </>
     )
-  }
 }
+
 
 export default Tracks;
