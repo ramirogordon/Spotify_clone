@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import userFace from '../img/face-user.jpg';
 
 import '../styles/LibraryNavigation.css';
 
@@ -11,6 +12,7 @@ class LibraryNavigation extends Component {
 
   render() {
     let {userName, userImageUrl } = this.props.dataUser;
+    let userImage = userImageUrl ? userImageUrl : userFace;
     return (
       <div className="librarynavigation-content">
         <div className="submenu">
@@ -21,8 +23,8 @@ class LibraryNavigation extends Component {
           type="button"/>
         <input 
           onClick={a => this.changeTitle(a)}
-          name="suggestion"
-          value="Suggestions"
+          name="discover"
+          value="Discover"
           type="button"/>
         <input 
           onClick={a => this.changeTitle(a)}
@@ -31,8 +33,8 @@ class LibraryNavigation extends Component {
           type="button"/>
         <input 
           onClick={a => this.changeTitle(a)}
-          name="albumes"
-          value="Albumes"
+          name="albums"
+          value="Albums"
           type="button"/>
         <input 
           onClick={a => this.changeTitle(a)}
@@ -47,7 +49,7 @@ class LibraryNavigation extends Component {
         </div>
         <hr className="line"/>
         <div className="info-user">
-          <img className="face-user" src={userImageUrl} alt=""/>
+          <img className="face-user" src={userImage} alt=""/>
           <p>{userName}</p>
         </div>
       </div>

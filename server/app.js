@@ -11,8 +11,8 @@ var cors = require('cors');
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 
-var client_id = 'de5eb7e18f6d4eed908335927ce7bc18'; // Your client id
-var client_secret = 'd20fe77a0a864d42b6b33fb3c595739e'; // Your secret
+var client_id = '9518a0c6df3340699fe81bd99c323f4a'; // Your client id
+var client_secret = 'f15f8d0428c64576a5e3cec20ff651e5'; // Your secret
 var redirect_uri = 'http://localhost:3001/callback'; // Your redirect uri
 
 var generateRandomString = function(length) {
