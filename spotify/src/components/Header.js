@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import spotifyLogo from '../img/spotify_logo.png';
-// import queryString from 'query-string';
 
 // Styles
 import '../styles/Header.css';
 
 class Header extends Component {
-
+  
   
   render() {
     return (
