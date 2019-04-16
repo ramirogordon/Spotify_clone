@@ -11,8 +11,8 @@ var cors = require('cors');
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 
-var client_id = '9518a0c6df3340699fe81bd99c323f4a'; // Your client id
-var client_secret = 'f15f8d0428c64576a5e3cec20ff651e5'; // Your secret
+var client_id = 'de5eb7e18f6d4eed908335927ce7bc18'; // Your client id
+var client_secret = 'd20fe77a0a864d42b6b33fb3c595739e'; // Your secret
 var redirect_uri = 'http://localhost:3001/callback'; // Your redirect uri
 
 var generateRandomString = function(length) {
@@ -108,71 +108,6 @@ app.get('/callback', function(req, res) {
         //     refresh_token: refresh_token
         //   }));
         let uri = 'http://localhost:3000';
-        res.redirect(uri + '?access_token=' + access_token);
-      } else {
-        res.redirect('/#' +
-          querystring.stringify({
-            error: 'invalid_token'
-          }));
-      }
-    });
-  }
-});
-
-app.get('/library', function(req, res) {
-
-  // your application requests refresh and access tokens
-  // after checking the state parameter
-  console.log('entrando al metodo library');
-  var code = req.query.code || null;
-  var state = req.query.state || null;
-  var storedState = req.cookies ? req.cookies[stateKey] : null;
-  console.log('code=', code);
-
-  if (state === null || state !== storedState) {
-    res.redirect('/#' +
-      querystring.stringify({
-        error: 'state_mismatch'
-      }));
-  } else {
-    res.clearCookie(stateKey);
-    var authOptions = {   
-      url: 'https://accounts.spotify.com/api/token',
-      form: {
-        code: code,
-        redirect_uri: redirect_uri,
-        grant_type: 'authorization_code'
-      },
-      headers: {
-        'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
-      },
-      json: true
-    };
-
-    request.post(authOptions, function(error, response, body) {
-      if (!error && response.statusCode === 200) {
-
-        var access_token = body.access_token,
-            refresh_token = body.refresh_token;
-        console.log('este es el ', access_token);
-        var options = {
-          url: 'https://api.spotify.com/v1/me',
-          headers: { 'Authorization': 'Bearer ' + access_token },
-          json: true
-        };
-
-        // use the access token to access the Spotify Web API
-        request.get(options, function(error, response, body) {
-          console.log(body);
-        });
-
-        // we can also pass the token to the browser to make requests from there
-        // res.redirect('/#' +
-        //   querystring.stringify({
-        //     access_token: access_token,
-        //     refresh_token: refresh_token
-        //   }));
-        let uri = 'http://localhost:3000/library';
         res.redirect(uri + '?access_token=' + access_token);
       } else {
         res.redirect('/#' +
