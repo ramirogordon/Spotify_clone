@@ -33,7 +33,7 @@ class LibraryScreen extends Component {
     console.log('Verdadero accessToken', accessToken );
 
     // Fetching User Data
-    fetch('https://api.spotify.com/v1/users/mlovi34', {
+    fetch('https://api.spotify.com/v1/me', {
       headers: {'Authorization': 'Bearer ' + accessToken}})
       .then(response => response.json())
       .then(data => {

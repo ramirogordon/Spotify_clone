@@ -14,7 +14,7 @@ class HomeMain extends Component {
         <div className="homemain-content">
           <div className="newReleases">
             <h2>NEW RELEASES</h2>
-            <Playlist playlist={playlists} />
+            <Playlist contentPlaylist={playlists} />
           </div>
           <div className="charts-content">
             <h2>CHARTS</h2>
