@@ -1,6 +1,6 @@
 import React from 'react'
 
- const Tracks = (props) => {
+ const Track = (props) => {
     return (
         <>
             <li key={props.i}>
@@ -11,4 +11,4 @@ import React from 'react'
 }
 
 
-export default Tracks;
+export default Track;

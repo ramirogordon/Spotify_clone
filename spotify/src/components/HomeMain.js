@@ -7,29 +7,14 @@ class HomeMain extends Component {
   render() {
     let list;
     const playlists = this.props.data.items;
-    // console.log(playlists);
-    if (playlists) {
-      list = playlists.map((item, i) => {
-        const imagen = item.images[0].url
-        return(
-          <div className="band-name" key={i}>
-            <Playlist 
-              band={imagen}
-              item={item}
-              accessToken={this.props.accessToken}
-            />
-          </div>
-        )
-      });
-    }
+    console.log(playlists);
+    
     return (
       <div className="homemain">
         <div className="homemain-content">
           <div className="newReleases">
             <h2>NEW RELEASES</h2>
-            <div className="band-items">
-              {list}
-            </div>
+            <Playlist playlist={playlists} />
           </div>
           <div className="charts-content">
             <h2>CHARTS</h2>
