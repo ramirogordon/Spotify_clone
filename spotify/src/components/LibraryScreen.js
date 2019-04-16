@@ -75,7 +75,6 @@ class LibraryScreen extends Component {
     headers: {'Authorization': 'Bearer ' + accessToken}})
     .then(response => response.json())
     .then(data => {
-      console.log('Estos son los albumes',data);
       this.setState({
       ...this.state,
       contentDetails: {...this.state.contentDetails, albums: data.albums}
@@ -101,7 +100,7 @@ class LibraryScreen extends Component {
   }
 
   render() {
-    console.log('Este es el state completo',this.state);
+    console.log(this.state.contentDetails);
     return (
       <div>
         <Header userName={this.state.data.userName}/>

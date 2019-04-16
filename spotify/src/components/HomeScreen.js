@@ -33,7 +33,7 @@ class HomeScreen extends Component {
       }
     })
     // usuario data
-    fetch('https://api.spotify.com/v1/users/mlovi34', {
+    fetch('https://api.spotify.com/v1/me', {
       headers: {'Authorization': 'Bearer ' + accessToken}
     }).then(
       response => response.json()

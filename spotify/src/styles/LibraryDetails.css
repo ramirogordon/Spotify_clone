@@ -1,5 +1,5 @@
 .libraryDetails {
-    padding: 0;
+    padding: 1rem;
     margin: 0;
     padding-top: 20px; 
     padding-bottom: 100px;
@@ -29,7 +29,7 @@
 
 h2 {
     text-transform: uppercase;
-    padding: 1rem 0 2rem 1.563rem;
+    padding: 1rem 0;
     color: #1ed760;
 }
 

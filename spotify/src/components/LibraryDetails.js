@@ -5,7 +5,6 @@ import Track from './Track';
 
 class LibraryDetails extends Component {
   render() {
-    console.log(this.props.contentCategory);
     return (
       <div className="libraryDetails">
         <h2>{ this.props.title }</h2>

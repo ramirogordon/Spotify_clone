@@ -27,8 +27,7 @@ class LibraryMain extends Component {
 
   //category => category.keys === this.state.details.detailsTitle
   render() {
-    const content = this.props.contentDetails[this.state.details.detailsTitle]
-    console.log(content);
+    const content = this.props.contentDetails[this.state.details.detailsTitle];
     return (
       <div className="librarymain-content">
         <div className="navi">
