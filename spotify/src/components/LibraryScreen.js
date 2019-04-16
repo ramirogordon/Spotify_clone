@@ -49,7 +49,7 @@ class LibraryScreen extends Component {
     .then(response => response.json())
     .then(data => this.setState({
       ...this.state,
-      contentDetails: {...this.state.contentDetails, playlist: data}
+      contentDetails: {...this.state.contentDetails, playlist: data.items}
     }));
 
     // Fetching Discover

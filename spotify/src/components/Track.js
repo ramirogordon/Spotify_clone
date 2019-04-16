@@ -4,7 +4,7 @@ import React from 'react'
     return (
         <>
             <li key={props.i}>
-                <p>{props.song}</p>
+                <p>fghdfhdfg</p>
             </li>
         </>
     )
