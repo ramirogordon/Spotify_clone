@@ -13,10 +13,9 @@ import band10 from '../img/band10.png';
 
 class LibraryDetails extends Component {
   render() {
-    const name = this.props.name
     return (
       <div className="libraryDetails">
-        <h2>{ name }</h2>
+        <h2>{ this.props.title }</h2>
         <div className="items">
           <div className="item">
             <img src={band6} alt="band6" />

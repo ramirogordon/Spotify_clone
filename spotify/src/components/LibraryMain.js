@@ -8,8 +8,7 @@ class LibraryMain extends Component {
     super(props);
     this.state = {
       details: {
-        detailsTitle: 'PRUEBA',
-        detailsContent: ''
+        detailsTitle: 'playlist'
       }
     }
   }
@@ -17,7 +16,7 @@ class LibraryMain extends Component {
   handleChangeTitle = (title) => {
     this.setState({
       ...this.state,
-      details: {detailsTitle: title}
+      details: {...this.state.details, detailsTitle: title}
     })
   }
   /*
@@ -26,7 +25,10 @@ class LibraryMain extends Component {
   ->Cargar contenido al state desde props.
   */
 
+  //category => category.keys === this.state.details.detailsTitle
   render() {
+    const content = this.props.contentDetails[this.state.details.detailsTitle]
+    console.log(content);
     return (
       <div className="librarymain-content">
         <div className="navi">
@@ -38,7 +40,8 @@ class LibraryMain extends Component {
         <div className="det">
           <LibraryDetails 
             className="det" 
-            name={this.state.details.detailsTitle}
+            title={this.state.details.detailsTitle}
+            contentCategory={content}
           />
         </div>
       </div>

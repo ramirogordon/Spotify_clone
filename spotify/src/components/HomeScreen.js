@@ -23,6 +23,7 @@ class HomeScreen extends Component {
   componentWillMount() {
     let parsed = queryString.parse(window.location.search);
     let accessToken = parsed.access_token;
+    localStorage.setItem('accessToken', accessToken);
     this.setState({
       ...this.state,
       data: {
@@ -31,7 +32,7 @@ class HomeScreen extends Component {
       }
     })
     // usuario data
-    fetch('https://api.spotify.com/v1/users/ramirogordon', {
+    fetch('https://api.spotify.com/v1/users/mlovi34', {
       headers: {'Authorization': 'Bearer ' + accessToken}
     }).then(
       response => response.json()

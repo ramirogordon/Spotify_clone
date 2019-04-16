@@ -3,23 +3,19 @@ import Tracks from './Tracks';
 
 class Playlist extends Component {
   constructor() {
-    super();
-    this.state = {
-      songs: null
-    }
+  super();
+  this.state = {
+    songs: null
+  }
   }
 
   componentDidMount() {
     fetch(this.props.item.tracks.href, {
-      headers: {'Authorization': 'Bearer ' + this.props.accessToken}
-    }).then(
-      response => response.json()
-    ).then(
-      songs => {
-        this.setState({
-          songs: songs
-        });
-      }
+      headers: {'Authorization': 'Bearer ' + this.props.accessToken}})
+      .then( response => response.json())
+      .then(songs => {
+          this.setState({songs});
+        }
     );
   }
   

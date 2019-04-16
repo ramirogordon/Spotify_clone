@@ -6,7 +6,7 @@ import '../styles/LibraryNavigation.css';
 class LibraryNavigation extends Component {
 
   changeTitle = (a) => {
-    let title = a.target.value;
+    let title = a.target.name;
     this.props.handleChangeTitle(title)
   }
 

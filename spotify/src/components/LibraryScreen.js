@@ -15,28 +15,22 @@ class LibraryScreen extends Component {
         userImageUrl: ''
       },
       contentDetails: {
-        playlist: {
-        },
-        discover: {
-        },
-        songs: {
-        },
-        albums: {
-        },
-        artists: {
-        },
-        releases: {
-        }
+        playlist: [],
+        discover: [],
+        songs: [],
+        albums: [],
+        artists: [],
+        releases: []
       }
     }
   }
-
   componentDidMount() {
     // let parsed = queryString.parse(window.location.search);
     // console.log(parsed);
 
     // Hardcoding accessToken (Then will be recived by Redux store)
-    let accessToken = 'BQCwkpaCWyM8ZbrrhLFIZYdZ90WioIFz9zNs-OYnq93F-p4tpKBSGnlvX6mYYFbhNsoUaqN8zG25lPCNfprouEtcqjIfymOAWWCoSqyXLw82Q-FKEyAbnwMQCFYq-412GkD4-hNTIVtdLEmyQjNqhLAuvvIUIivY';
+    let accessToken = localStorage.accessToken;
+    console.log('Verdadero accessToken', accessToken );
 
     // Fetching User Data
     fetch('https://api.spotify.com/v1/users/mlovi34', {
@@ -64,7 +58,7 @@ class LibraryScreen extends Component {
     .then(response => response.json())
     .then(data => this.setState({
       ...this.state,
-      contentDetails: {...this.state.contentDetails, discover: data}
+      contentDetails: {...this.state.contentDetails, discover: data.tracks}
     }));
 
     // Fetching Songs
@@ -73,7 +67,7 @@ class LibraryScreen extends Component {
     .then(response => response.json())
     .then(data => this.setState({
       ...this.state,
-      contentDetails: {...this.state.contentDetails, songs: data}
+      contentDetails: {...this.state.contentDetails, songs: data.tracks}
     }));
 
     // Fetching Albums
@@ -84,7 +78,7 @@ class LibraryScreen extends Component {
       console.log('Estos son los albumes',data);
       this.setState({
       ...this.state,
-      contentDetails: {...this.state.contentDetails, albums: data}
+      contentDetails: {...this.state.contentDetails, albums: data.albums}
     })});
 
     // Fetching Artists
@@ -93,7 +87,7 @@ class LibraryScreen extends Component {
     .then(response => response.json())
     .then(data => this.setState({
       ...this.state,
-      contentDetails: {...this.state.contentDetails, artists: data}
+      contentDetails: {...this.state.contentDetails, artists: data.artists}
     }));
 
     // Fetching Releases
@@ -102,20 +96,19 @@ class LibraryScreen extends Component {
     .then(response => response.json())
     .then(data => this.setState({
       ...this.state,
-      contentDetails: {...this.state.contentDetails, releases: data}
+      contentDetails: {...this.state.contentDetails, releases: data.albums.items}
     }));
-
-    
-
-
   }
 
   render() {
-    console.log(this.state.contentDetails);
+    console.log('Este es el state completo',this.state);
     return (
       <div>
         <Header userName={this.state.data.userName}/>
-        <LibraryMain dataUser={this.state.data}/>
+        <LibraryMain 
+          dataUser={this.state.data}
+          contentDetails={this.state.contentDetails}
+          />
         <Footer />
       </div>
     )
