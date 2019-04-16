@@ -76,12 +76,12 @@ class HomeScreen extends Component {
     console.log(this.state.data);
     return (
       <div>
-        <Header data={this.state.data}/>
+        <Header data={this.state.data.user}/>
         <HomeMain 
           data={this.state.data.playlists} 
           accessToken={this.state.data.token}
         />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

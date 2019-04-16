@@ -10,3 +10,7 @@
 audio {
     padding: 15px 0;
 }
+
+iframe {
+    padding: 0.5rem;
+}

@@ -108,7 +108,7 @@ class LibraryScreen extends Component {
           dataUser={this.state.data}
           contentDetails={this.state.contentDetails}
           />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

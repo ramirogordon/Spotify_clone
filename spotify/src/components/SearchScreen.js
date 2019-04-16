@@ -14,7 +14,7 @@ class SearchScreen extends Component {
       <div>
         <Header />
         <SearchMain />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

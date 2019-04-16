@@ -3,7 +3,7 @@ import HomeScreen from './components/HomeScreen';
 import SearchScreen from './components/SearchScreen';
 import LibraryScreen from './components/LibraryScreen';
 import './App.css';
-
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -14,6 +14,8 @@ class App extends Component {
           <Route exact path="/" component={HomeScreen} />
           <Route path="/search" component={SearchScreen} />
           <Route path="/library" component={LibraryScreen} />
+
+          <Footer/>
         </div>
       </Router>
     );
