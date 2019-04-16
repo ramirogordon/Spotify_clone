@@ -22,6 +22,7 @@ class HomeScreen extends Component {
   
   componentWillMount() {
     let parsed = queryString.parse(window.location.search);
+    // console.log(localStorage);
     let accessToken = parsed.access_token;
     this.setState({
       ...this.state,
@@ -63,6 +64,7 @@ class HomeScreen extends Component {
 
 
   render() {
+    // console.log(localStorage);
     console.log(this.state.data);
     return (
       <div>
