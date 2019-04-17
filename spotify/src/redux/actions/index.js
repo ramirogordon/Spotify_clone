@@ -5,6 +5,7 @@ import songs from './Songs';
 import albums from './Albums';
 import artists from './Artists';
 import releases from './Releases';
+import currentSong from './CurrentSong';
 
 export default {
     userData,
@@ -13,5 +14,6 @@ export default {
     songs,
     albums,
     artists,
-    releases
+    releases,
+    currentSong
 }

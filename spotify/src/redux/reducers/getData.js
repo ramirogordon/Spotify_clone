@@ -10,7 +10,8 @@ const defaultState = {
         albums: [],
         artists: [],
         releases: []
-    }
+    },
+    currentSong: ''
 };
 
 function reducer(state = defaultState, {type, payload}) {
@@ -51,6 +52,10 @@ function reducer(state = defaultState, {type, payload}) {
             return {...state,  contentDetails: {
                 ...state.contentDetails, releases: payload
             }}
+        }
+        case 'CHANGE_SONG':{
+            let aux = payload.replace('.com', '.com/embed');
+            return {...state, currentSong: aux}
         }
         default: {
             return state;
